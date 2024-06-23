@@ -261,14 +261,14 @@ class Game {
     }
 
     drawPauseMessage() {
-        let message = "Game Paused\n\nPress:\n Space to Resume\n q to Quit";
+        let message = "Game Paused\n\nPress Space to Resume";
         ctx.fillStyle = 'purple';
         ctx.font = '25px Arial';
         this.drawMultilineText(ctx, message, width / 2 - 150, height / 2 - 50);
     }
 
     drawStartMessage() {
-        let message = "Press Enter to Play\n\nYou have 60 seconds to score\n\nKey Bindings\n↑ or W: Move up\n↓ or S: Move down\n← or A: Move left\n→ or D: Move right\n\nSpace: Pause\nq: Quit";
+        let message = "Press Enter to Play\n\nYou have 60 seconds to score\n\nKey Bindings\n↑ or W: Move up\n↓ or S: Move down\n← or A: Move left\n→ or D: Move right\n\nSpace: Pause";
         ctx.fillStyle = 'purple';
         ctx.font = '25px Arial';
         this.drawMultilineText(ctx, message, width / 2 - 150, height / 2 - 150);
@@ -276,12 +276,12 @@ class Game {
 
     drawLostMessage() {
         if (this.finalTime < 60) {
-            let message = `Time survived: ${this.finalTime}s\nYour score: ${this.score}\n\nPress:\nEnter to Play Again\nq to Quit`;
+            let message = `Time survived: ${this.finalTime}s\nYour score: ${this.score}\n\nPress Enter to Play Again`;
             ctx.fillStyle = 'red';
             ctx.font = '25px Arial';
             this.drawMultilineText(ctx, message, width / 2 - 150, height / 2 - 50);
         } else {
-            let message = `Time is over!!\nYour score: ${this.score}\n\nPress:\nEnter to Play Again\nq to Quit`;
+            let message = `Time is over!!\nYour score: ${this.score}\n\nPress Enter to Play Again`;
             ctx.fillStyle = 'purple';
             ctx.font = '25px Arial';
             this.drawMultilineText(ctx, message, width / 2 - 150, height / 2 - 50);
